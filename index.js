@@ -30,6 +30,11 @@ const menu = () => {
                 list.appendChild(img)
                 ol.appendChild(list)
                 ol.appendChild(br)
+                if (searchBar.value != "") {
+                    var desc = document.createElement("p")
+                    desc.innerText = (response["meals"][i]["strInstructions"])
+                    ol.appendChild(desc)
+                }
             }
         })
     }
